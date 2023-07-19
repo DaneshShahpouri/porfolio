@@ -993,7 +993,7 @@ export default {
         }
 
         @media screen and (max-width: 492px) {
-            margin-top: 3em;
+            margin-top: 70px;
         }
     }
 
