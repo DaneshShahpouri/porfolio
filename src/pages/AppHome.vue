@@ -524,6 +524,9 @@ export default {
     },
 
     mounted() {
+        //dimensione per mobile
+        let showroom = document.getElementById('showroom')
+        showroom.style = 'height:' + window.innerHeight + 'px;'
         //Animazione Background
         this.store.contatore = 0;
         this.postcontatore = 1;
@@ -966,7 +969,7 @@ export default {
 
 #showroom {
     width: 100vw;
-    height: 100vh;
+    height: 100%;
     overflow: hidden;
     position: relative;
 
