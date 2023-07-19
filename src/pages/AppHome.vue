@@ -972,6 +972,7 @@ export default {
     height: 100%;
     overflow: hidden;
     position: relative;
+    background: white;
 
     .title {
         text-transform: uppercase;
@@ -992,7 +993,7 @@ export default {
         }
 
         @media screen and (max-width: 492px) {
-            margin-top: 1em;
+            margin-top: 3em;
         }
     }
 
