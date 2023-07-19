@@ -461,10 +461,11 @@ export default {
     created() {
         if (this.$route.name == 'home') {
             window.onwheel = event => {
-                if (event.deltaY >= 90) {
+                console.log(event.deltaY)
+                if (event.deltaY >= 20) {
                     this.scrollTo(this.store.contatore + 1)
                 }
-                else if (event.deltaY <= -90) {
+                else if (event.deltaY <= -20) {
                     this.scrollTo(this.store.contatore - 1)
                 }
             }
