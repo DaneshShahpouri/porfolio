@@ -85,7 +85,7 @@ export default {
 
         <div class="_about-container">
             <div class="img-wrapper">
-                <img src="../../public/foto profilo.png" alt="">
+                <img src="../../public/foto-profilo.png" alt="">
             </div>
 
             <!-- CerchioFoto -->
