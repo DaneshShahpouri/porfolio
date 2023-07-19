@@ -153,7 +153,7 @@ export default {
                 <div class="_mycard" v-for="project in this.store.projects">
 
                     <div class="img-wrapper">
-                        <img :src="project.cover_image == null ? 'https://www.kuleuven.be/communicatie/congresbureau/fotos-en-afbeeldingen/no-image.png/image' : ('../../public/Projects/' + project.cover_image)"
+                        <img :src="project.cover_image == null ? 'https://www.kuleuven.be/communicatie/congresbureau/fotos-en-afbeeldingen/no-image.png/image' : '../src/assets/Projects/' + project.cover_image"
                             class="_mycard-img-top h-100" alt="...">
                     </div>
                     <div class="text-info">

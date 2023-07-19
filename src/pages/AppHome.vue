@@ -734,7 +734,7 @@ export default {
             </div>
             <div v-else class="__container p-center 'justify-content-center align-items-center p-0" id="container-1">
                 <div class="container img-wrapper">
-                    <img :src="'../../public/Projects/' + store.confArray[store.contatore][3][store.contatoreOrizzontale]"
+                    <img :src="'../src/assets/Projects/' + store.confArray[store.contatore][3][store.contatoreOrizzontale]"
                         alt="prova">
                 </div>
             </div>
@@ -803,7 +803,7 @@ export default {
                 <div v-if="this.precontatoreOrizzontale > 0"
                     class="__container p-left 'justify-content-center align-items-center" id="container-left">
                     <div class="container img-wrapper">
-                        <img :src="'../../public/Projects/' + this.store.confArray[this.store.contatore][3][this.precontatoreOrizzontale]"
+                        <img :src="'../src/assets/Projects/' + this.store.confArray[this.store.contatore][3][this.precontatoreOrizzontale]"
                             alt="prova">
                     </div>
                 </div>
@@ -905,7 +905,7 @@ export default {
             <div v-if="this.store.confArray[this.store.contatore][3]"
                 class="__container p-right 'justify-content-center align-items-center p-0" id="container-right">
                 <div class="container img-wrapper">
-                    <img :src="'../../public/Projects/' + this.store.confArray[this.store.contatore][3][this.postcontatoreOrizzontale]"
+                    <img :src="'../src/assets/Projects/' + this.store.confArray[this.store.contatore][3][this.postcontatoreOrizzontale]"
                         alt="prova">
                 </div>
             </div>
@@ -946,7 +946,7 @@ export default {
 
                     </div>
                     <img id="img-bg"
-                        :src="this.store.confArray[this.store.contatore][3] ? '../../public/Projects/' + this.store.confArray[this.store.contatore][3][1] : ''"
+                        :src="this.store.confArray[this.store.contatore][3] ? '../src/assets/Projects/' + this.store.confArray[this.store.contatore][3][1] : ''"
                         alt="" :style="this.store.confArray[this.store.contatoreBackground][2] ? 'opacity:1' : 'opacity:0'"
                         v-if="this.store.contatoreBackground != 0 && this.store.contatoreBackground != (this.store.confArray.length - 1)">
                 </div>
