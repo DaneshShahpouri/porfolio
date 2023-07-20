@@ -83,9 +83,10 @@ export default {
 
                 <div class="logo-wrapper">
                     <h5 id="logo"
-                        :style="store.confArray[store.contatoreBackground][2] ? 'color: white;' : 'color: black;'">DS</h5>
+                        :style="this.store.currentPage == 'home' && store.confArray[store.contatoreBackground][2] ? 'color: white;' : 'color: black;'">
+                        DS</h5>
                     <div class="rombo"
-                        :style="store.confArray[store.contatoreBackground][2] ? 'border: 1px solid white;' : 'border: 1px solid black;'">
+                        :style="this.store.currentPage == 'home' && store.confArray[store.contatoreBackground][2] ? 'border: 1px solid white;' : 'border: 1px solid black;'">
                     </div>
                 </div>
 
@@ -126,7 +127,8 @@ export default {
                     <div class="btn-filler" :style="this.store.searchInput != '' ? 'height: 50px;' : ''"></div>
                     <div class="modulo-search">
                         <input v-model="store.searchInput" class="form-control" type="search" placeholder="Search"
-                            aria-label="Search" :class="this.store.confArray[2] ? 'input-light' : 'input-dark'"
+                            aria-label="Search"
+                            :class="this.store.currentPage == 'home' && this.store.confArray[2] ? 'input-light' : 'input-dark'"
                             :style="store.searchInput == '' ? '' : 'opacity:1'" @input="search()">
                     </div>
                 </form>

@@ -19,10 +19,19 @@ export default {
     },
 
     created() {
-        this.PostSlug = this.$route.params.slug,
-            this.getProject(),
-            this.store.currentPage = 'projects';
+        this.PostSlug = this.$route.params.slug;
+        this.getProject();
         //console.log(this.PostSlug)
+        this.store.currentPage = 'projects';
+    },
+
+    updated() {
+        this.store.currentPage = 'projects';
+    },
+
+    mounted() {
+
+        this.store.currentPage = 'projects';
     },
 
     methods: {

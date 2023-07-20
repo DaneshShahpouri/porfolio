@@ -114,15 +114,19 @@ export default {
 
 
     created() {
-        this.store.isLoading = true,
-            this.store.searchInput = '',
-            this.getTempProjects()
+        this.store.isLoading = true;
+        this.store.searchInput = '';
+        this.getTempProjects()
+        this.store.currentPage = 'projects';
 
     },
 
     mounted() {
-        this.store.currentPage = 'projects';
         window.addEventListener('scroll', this.elScrollParallax);
+    },
+
+    updated(){
+        this.store.currentPage = 'projects';
     },
 
     unmounted() {

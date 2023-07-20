@@ -66,12 +66,19 @@ export default {
         }
     },
 
-    mounted() {
+    created(){
         this.store.currentPage = 'about';
-        console.log(this.store.currentPage)
+    },
+
+    mounted() {
+        //console.log(this.store.currentPage)
         this.animationIcon()
         this.animationTextAppear()
         window.addEventListener('scroll', this.animationIcon);
+    },
+    
+    updated() {
+        this.store.currentPage = 'about';
     },
 }
 </script>

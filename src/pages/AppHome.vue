@@ -467,7 +467,8 @@ export default {
     },
 
     created() {
-        const images = import.meta.glob('../assets/Projects/Avada.jpg');
+
+        this.store.currentPage = 'home';
 
 
         if (this.store.currentPage == 'home') {
@@ -486,7 +487,7 @@ export default {
             window.addEventListener('touchstart', (e) => {
 
 
-                //console.log(e.toucheList)
+                //console.log(this.store.currentPage)
                 //console.log('start Y')
                 //console.log(e.touches[0].clientY)
                 this.startY = e.touches[0].clientY;
@@ -514,9 +515,9 @@ export default {
                     } else {
                         //console.log('scrollX')
                         if (this.store.confArray[this.store.contatore][2]) {
-                            if (this.startX < this.endX) {
+                            if (this.startX < this.endX && Math.abs(this.startX - this.endX) > 80) {
                                 this.scrollLeftRight(this.store.contatoreOrizzontale - 1)
-                            } else {
+                            } else if (Math.abs(this.endX - this.startX) > 80) {
                                 this.scrollLeftRight(this.store.contatoreOrizzontale + 1)
                             }
                         }
@@ -529,6 +530,49 @@ export default {
             //     console.log('move')
             //     console.log(e)
             // });
+        } else {
+            window.removeEventListener('touchstart', (e) => {
+
+
+                console.log(this.store.currentPage)
+                //console.log('start Y')
+                //console.log(e.touches[0].clientY)
+                this.startY = e.touches[0].clientY;
+                // console.log('start X')
+                // console.log(e.touches[0].clientX)
+                this.startX = e.touches[0].clientX;
+
+                window.addEventListener('touchend', (ev) => {
+                    //console.log('end Y')
+                    //console.log(e.changedTouches[0].clientY)
+                    this.endY = ev.changedTouches[0].clientY;
+                    //console.log('end X')
+                    //console.log(e.changedTouches[0].clientX)
+                    this.endX = ev.changedTouches[0].clientX;
+
+                    if (Math.abs(this.startY - this.endY) > Math.abs(this.startX - this.endX)) {
+                        //console.log('scroll Y')
+                        if (this.startY > this.endY) {
+                            //console.log('top')
+                            this.scrollTo(this.store.contatore + 1)
+                        } else {
+                            //console.log('down')
+                            this.scrollTo(this.store.contatore - 1)
+                        }
+                    } else {
+                        //console.log('scrollX')
+                        if (this.store.confArray[this.store.contatore][2]) {
+                            if (this.startX < this.endX && Math.abs(this.startX - this.endX) > 80) {
+                                this.scrollLeftRight(this.store.contatoreOrizzontale - 1)
+                            } else if (Math.abs(this.endX - this.startX) > 80) {
+                                this.scrollLeftRight(this.store.contatoreOrizzontale + 1)
+                            }
+                        }
+                    }
+                });
+
+
+            })
         }
 
         this.getImpProjects();
@@ -545,7 +589,6 @@ export default {
         this.precontatore = this.store.confArray.length - 1;
         this.store.contatoreBackground = 0;
 
-        this.store.currentPage = 'home';
         this.backgroundAnimation();
 
         //Movimento frecce
@@ -576,12 +619,15 @@ export default {
         }
     },
 
+    updated() {
+        this.store.currentPage = 'home';
+    },
     unmounted() {
         this.store.contatoreBackgroundOrizzontale = 0;
         this.store.contatoreBackground = 0;
         this.store.contatoreOrizzontale = 0;
         this.store.contatore = 0;
-
+        this.store.currentPage = '';
     }
 }
 
