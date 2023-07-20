@@ -486,7 +486,7 @@ export default {
             window.addEventListener('touchstart', (e) => {
 
 
-                console.log(e.toucheList)
+                //console.log(e.toucheList)
                 //console.log('start Y')
                 //console.log(e.touches[0].clientY)
                 this.startY = e.touches[0].clientY;
