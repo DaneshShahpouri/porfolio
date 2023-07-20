@@ -470,7 +470,7 @@ export default {
         const images = import.meta.glob('../assets/Projects/Avada.jpg');
 
 
-        if (this.$route.name == 'home') {
+        if (this.store.currentPage == 'home') {
             window.onwheel = event => {
                 if (event.deltaY >= 50) {
                     this.scrollTo(this.store.contatore + 1)
@@ -481,7 +481,7 @@ export default {
             }
         };
 
-        if (this.$route.name == 'home') {
+        if (this.store.currentPage == 'home') {
 
             window.addEventListener('touchstart', (e) => {
 

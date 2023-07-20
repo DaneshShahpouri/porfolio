@@ -76,7 +76,7 @@ export default {
                 </div>
 
                 <div class="col-md-8 offset-md-1 mb-3">
-                    <form @submit.prevent="inviaEmail()">
+                    <form method="POST" data-netlify="true">
                         <h5 class="text-light">Scrivimi un messaggio</h5>
                         <div class="d-flex flex-column flex-sm-col w-100 gap-2">
                             <label for="email" class="visually-hidden">Email</label>
