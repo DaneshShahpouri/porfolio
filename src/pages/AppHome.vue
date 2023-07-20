@@ -503,16 +503,23 @@ export default {
                     this.endX = ev.changedTouches[0].clientX;
 
                     if (Math.abs(this.startY - this.endY) > Math.abs(this.startX - this.endX)) {
-                        console.log('scroll Y')
+                        //console.log('scroll Y')
                         if (this.startY > this.endY) {
-                            console.log('top')
+                            //console.log('top')
                             this.scrollTo(this.store.contatore + 1)
                         } else {
-                            console.log('down')
+                            //console.log('down')
                             this.scrollTo(this.store.contatore - 1)
                         }
                     } else {
-                        console.log('scrollX')
+                        //console.log('scrollX')
+                        if (this.store.confArray[this.store.contatore][2]) {
+                            if (this.startX < this.endX) {
+                                this.scrollLeftRight(this.store.contatoreOrizzontale - 1)
+                            } else {
+                                this.scrollLeftRight(this.store.contatoreOrizzontale + 1)
+                            }
+                        }
                     }
                 });
 
