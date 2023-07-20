@@ -1,6 +1,7 @@
 <script>
 import { store } from '../store.js';
-import axios from 'axios';
+
+
 export default {
     name: 'AppHome',
     data() {
@@ -27,6 +28,7 @@ export default {
 
 
     methods: {
+
         //Chiamata  Axios API (server)
         // getImpProjects() {
         //     axios.get('http://127.0.0.1:8000/api/projects').then(response => {
@@ -465,6 +467,9 @@ export default {
     },
 
     created() {
+        const images = import.meta.glob('../assets/Projects/Avada.jpg');
+
+
         if (this.$route.name == 'home') {
             window.onwheel = event => {
                 if (event.deltaY >= 50) {
