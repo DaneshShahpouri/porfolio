@@ -129,7 +129,7 @@ export default {
                         <input v-model="store.searchInput" class="form-control" type="search" placeholder="Search"
                             aria-label="Search"
                             :class="this.store.currentPage == 'home' && this.store.confArray[2] ? 'input-light' : 'input-dark'"
-                            :style="store.searchInput == '' ? '' : 'opacity:1'" @input="search()">
+                            :style="this.store.currentPage == 'home' && store.searchInput == '' ? '' : 'opacity:1'" @input="search()">
                     </div>
                 </form>
                 <div v-else class="btn-wrapper"></div>
