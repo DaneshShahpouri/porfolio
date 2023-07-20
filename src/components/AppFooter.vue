@@ -107,6 +107,7 @@ export default {
 
             <div class="d-flex flex-column flex-sm-row justify-content-between py-4 my-4 border-top">
                 <p>© 2023 Danesh Shahpouri. All rights reserved</p>
+                <p>inspired by <a href="https://oropendola.dev/#page-dragonleaves/1" target="_blank">OROPENDOLA</a></p>
                 <ul class="list-unstyled d-flex">
                     <li class="ms-3">
                         <a href="https://github.com/DaneshShahpouri" target="_blank" class="link-light"><i
