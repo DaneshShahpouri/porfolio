@@ -51,7 +51,7 @@ export default {
         <div class="_single-project">
             <h1 class="">{{ singleProject.title }}</h1>
             <div class="img-wrapper">
-                <img :src="singleProject.cover_image == null ? 'https://www.kuleuven.be/communicatie/congresbureau/fotos-en-afbeeldingen/no-image.png/image' : ('../../public/Projects/' + singleProject.cover_image)"
+                <img :src="singleProject.cover_image == null ? 'https://www.kuleuven.be/communicatie/congresbureau/fotos-en-afbeeldingen/no-image.png/image' : ('/assets/Projects/' + singleProject.cover_image)"
                     class="_mycard-img-top h-100" alt="...">
             </div>
 
