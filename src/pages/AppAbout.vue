@@ -45,6 +45,7 @@ export default {
 
                 let iconPos = iconsArray[0].getBoundingClientRect();
 
+                //console.log(iconsArray)
                 if (iconPos.top < 700) {
 
                     function contatoreFun() {
@@ -66,7 +67,7 @@ export default {
         }
     },
 
-    created(){
+    created() {
         this.store.currentPage = 'about';
     },
 
@@ -74,9 +75,13 @@ export default {
         //console.log(this.store.currentPage)
         this.animationIcon()
         this.animationTextAppear()
-        window.addEventListener('scroll', this.animationIcon);
+        window.addEventListener('scroll', () => {
+            //console.log('scroll')
+            this.animationIcon();
+        })
+
     },
-    
+
     updated() {
         this.store.currentPage = 'about';
     },
