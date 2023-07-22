@@ -66,7 +66,7 @@ export default {
         }
     },
 
-    created() {
+    created(){
         this.store.currentPage = 'about';
     },
 
@@ -76,7 +76,7 @@ export default {
         this.animationTextAppear()
         window.addEventListener('scroll', this.animationIcon);
     },
-
+    
     updated() {
         this.store.currentPage = 'about';
     },
@@ -114,14 +114,14 @@ export default {
                     <h2>Le mie Skills</h2>
                     <div class="skills">
 
-                        <i class="fa-brands fa-html5"></i>
-                        <i class="fa-brands fa-css3-alt"></i>
-                        <i class="fa-brands fa-square-js"></i>
-                        <i class="fa-brands fa-bootstrap"></i>
-                        <i class="fa-brands fa-sass"></i>
-                        <i class="fa-brands fa-vuejs"></i>
-                        <i class="fa-brands fa-php"></i>
-                        <i class="fa-brands fa-laravel"></i>
+                        <i class="_animation-icons fa-brands fa-html5"></i>
+                        <i class="_animation-icons fa-brands fa-css3-alt"></i>
+                        <i class="_animation-icons fa-brands fa-square-js"></i>
+                        <i class="_animation-icons fa-brands fa-bootstrap"></i>
+                        <i class="_animation-icons fa-brands fa-sass"></i>
+                        <i class="_animation-icons fa-brands fa-vuejs"></i>
+                        <i class="_animation-icons fa-brands fa-php"></i>
+                        <i class="_animation-icons fa-brands fa-laravel"></i>
 
                     </div>
                 </div>
