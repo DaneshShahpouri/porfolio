@@ -122,10 +122,11 @@ export default {
     },
 
     mounted() {
+        this.store.currentPage = 'projects';
         window.addEventListener('scroll', this.elScrollParallax);
     },
 
-    updated(){
+    updated() {
         this.store.currentPage = 'projects';
     },
 
