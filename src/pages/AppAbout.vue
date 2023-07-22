@@ -74,8 +74,9 @@ export default {
     created() {
         this.store.currentPage = 'about';
     },
-
+    
     mounted() {
+        this.store.currentPage = 'about';
         //console.log(this.store.currentPage)
         this.animationIcon()
         this.animationTextAppear()
