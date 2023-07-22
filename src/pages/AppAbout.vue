@@ -37,6 +37,7 @@ export default {
 
         },
         animationIcon() {
+            console.log('animation')
             if (this.store.currentPage == 'about') {
 
                 let iconsArray = document.querySelectorAll('._animation-icons');
