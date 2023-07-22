@@ -85,7 +85,7 @@ export default {
         })
 
         window.addEventListener('touchend', () => {
-            console.log('t')
+            //console.log('t')
             this.animationIcon();
         })
 
