@@ -80,6 +80,10 @@ export default {
             this.animationIcon();
         })
 
+        window.addEventListener('touchend', () => {
+            this.animationIcon();
+        })
+
     },
 
     updated() {
