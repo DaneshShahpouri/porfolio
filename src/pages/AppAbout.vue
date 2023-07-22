@@ -125,7 +125,7 @@ export default {
                     </span>
                 </div>
                 <div class="_section-info">
-                    <h2>Le mie Skills</h2>
+                    <h2>Le mie skill</h2>
                     <div class="skills">
 
                         <i class="_animation-icons fa-brands fa-html5"></i>
