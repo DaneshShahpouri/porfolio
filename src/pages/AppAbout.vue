@@ -45,7 +45,7 @@ export default {
 
                 let iconPos = iconsArray[0].getBoundingClientRect();
 
-                //console.log(iconsArray)
+                console.log(iconsArray)
                 if (iconPos.top < 700) {
 
                     function contatoreFun() {
@@ -81,6 +81,7 @@ export default {
         })
 
         window.addEventListener('touchend', () => {
+            console.log('t')
             this.animationIcon();
         })
 
