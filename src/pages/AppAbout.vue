@@ -38,6 +38,7 @@ export default {
         },
         animationIcon() {
             console.log('animation start')
+            console.log(this.store.currentPage)
             if (this.store.currentPage == 'about') {
                 console.log('animation current page')
 
