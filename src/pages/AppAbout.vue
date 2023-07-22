@@ -37,8 +37,9 @@ export default {
 
         },
         animationIcon() {
-            console.log('animation')
+            console.log('animation start')
             if (this.store.currentPage == 'about') {
+                console.log('animation current page')
 
                 let iconsArray = document.querySelectorAll('._animation-icons');
                 let contatore = 0;
@@ -48,6 +49,7 @@ export default {
 
                 console.log(iconsArray)
                 if (iconPos.top < 700) {
+                    console.log('animation 700')
 
                     function contatoreFun() {
 
